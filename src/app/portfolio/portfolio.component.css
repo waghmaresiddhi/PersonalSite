@@ -1,101 +1,128 @@
-/* src/app/portfolio/portfolio.component.css */
+/* Full-screen background image */
+:host {
+  display: block;
+  background: url('https://www.michelleprince.com/wp-content/uploads/2018/05/MP-female-ambition.jpg') no-repeat center center; /* Background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center 10%; /* Shift the background image 10% downward */
+  height: 100vh; /* Full viewport height */
+  overflow: auto; /* Allow scrolling */
+}
 
-/* Overall container styling */
+/* Container for Portfolio page */
 .portfolio-container {
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
-  background-color: #f9f9f9; /* Light background for better readability */
-  overflow-y: auto; /* Enable vertical scrolling */
-  height: calc(100vh - 60px); /* Adjust height considering header/footer */
+  padding: 40px;
+  max-width: 900px; /* Wider container for larger screens */
+  margin: auto; /* Center horizontally */
+  position: relative; /* For positioning pseudo-elements */
+  background: rgba(255, 255, 255, 0.4); /* More transparent white background for lighter effect */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  color: #000; /* Darker text color for better contrast */
 }
 
-/* Introduction section styling */
-.introduction {
-  margin-bottom: 40px;
+/* Section titles */
+h2 {
+  text-align: center;
+  font-size: 2.5em; /* Larger font size for emphasis */
+  color: #000; /* Dark text color for readability */
+  font-weight: bold; /* Make text bold */
+  margin-bottom: 30px;
+  position: relative;
+  font-family: 'Roboto', sans-serif; /* Clean and modern font */
 }
 
-.introduction h2 {
-  font-size: 2.5em;
-  color: #007bff;
+/* Line under the section title */
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #007bff; /* Blue line */
+  margin: 10px auto 0; /* Center line */
+  border-radius: 3px; /* Rounded corners for the line */
+}
+
+/* Project titles */
+h3 {
+  font-size: 2em; /* Slightly smaller than section titles */
+  color: #000; /* Dark text color */
+  font-weight: bold; /* Make text bold */
   margin-bottom: 20px;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
-.introduction p {
+/* Line under the project title */
+h3::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #007bff; /* Blue line */
+  margin: 5px auto 0; /* Center line */
+  border-radius: 2px; /* Rounded corners for the line */
+}
+
+/* Paragraph styling */
+p {
   line-height: 1.8;
-  color: #333;
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  color: #000; /* Darker text color for readability */
+  font-size: 1.1em; /* Slightly larger font size */
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal; /* Normal weight for body text */
 }
 
-/* Projects section styling */
-.projects {
-  margin-top: 40px;
+/* List styling */
+ul {
+  margin-left: 20px; /* Indentation for lists */
+  color: #000; /* Darker text color */
 }
 
-.projects h2 {
-  font-size: 2.5em;
-  color: #007bff;
-  margin-bottom: 20px;
-}
-
-/* Project card styling */
-.project-card {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.project-image img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #ddd;
-}
-
-.project-details {
-  padding: 20px;
-}
-
-.project-details h3 {
-  font-size: 2em;
-  color: #007bff;
-  margin-bottom: 15px;
-}
-
-.project-details p {
-  line-height: 1.6;
-  color: #555;
-}
-
-.project-details ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-.project-details a.btn {
+/* Button styling */
+.btn {
   display: inline-block;
-  margin-top: 20px;
   padding: 10px 20px;
-  font-size: 1.1em;
+  margin-top: 10px;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
   color: #fff;
-  background-color: #007bff;
+  background-color: #007bff; /* Blue background */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  text-align: center;
   text-decoration: none;
-  border-radius: 5px;
 }
 
-.project-details a.btn:hover {
-  background-color: #0056b3;
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
-/* Ensure scrolling in case of overflow */
-body {
-  margin: 0; /* Remove default margin */
+/* Add a dotted line before each section */
+section::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #007bff, transparent); /* Dotted line effect */
+  margin: 20px 0; /* Space around the line */
 }
 
-html, body {
-  height: 100%; /* Full height to enable scrolling */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 20px; /* Less padding on smaller screens */
+    margin-top: 20px; /* Adjust space from the top */
+  }
+
+  h2 {
+    font-size: 1.8em; /* Adjust font sizes for smaller screens */
+  }
+
+  h3 {
+    font-size: 1.5em; /* Adjust font sizes for smaller screens */
+  }
+
+  p {
+    font-size: 1em; /* Adjust paragraph font size */
+  }
 }

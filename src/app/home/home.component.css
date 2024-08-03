@@ -1,96 +1,173 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&family=Lora:wght@400;500&display=swap');
+
 /* Home container styles */
 .home-container {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Align items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    min-height: 100vh; /* Ensure it covers at least full viewport height */
-    position: relative; /* Relative positioning for absolute children */
-    overflow: hidden; /* Hide overflow content */
-    text-align: center; /* Center-align text */
-    scroll-behavior: smooth; /* Smooth scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    scroll-behavior: smooth;
+    animation: fadeIn 3s ease-in-out; /* Slower fade-in animation */
 }
 
 /* Full-screen background image */
 .background-image {
-    position: absolute; /* Position it absolutely */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQN37h6jdzKRM5Xsj-1yPpaThAXSBAQVIzsA&s') no-repeat center center; /* Background image */
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the background image */
-    z-index: -1; /* Place it behind other content */
-    /* Add a filter to ensure clarity if needed */
-    /* filter: brightness(1) contrast(1) saturate(1); */
+    width: 100vw;
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/614484/pexels-photo-614484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(60%); /* Darken background for better text contrast */
 }
 
 /* Main content section */
 .main-content {
     padding: 20px;
-    z-index: 1; /* Ensure content is above the background */
+    z-index: 1;
+    position: relative; /* Make main-content the reference point for absolute positioning */
 }
 
 /* Name and introduction styles */
 .name-intro {
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    height: 60vh; /* Give it enough height for vertical centering */
-    margin-bottom: 40px; /* Space between introduction and buttons */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    margin-bottom: 40px;
+    color: #f9f9f9; /* Light text color for contrast */
+    text-align: center;
+    animation: fadeInUp 3s ease-in-out; /* Slower fade-in and slide-up animation */
 }
 
 /* Name styles */
 .name-intro h1 {
-    font-family: 'Playfair Display', serif; /* Elegant font for name */
-    font-size: 3em; /* Large font size for emphasis */
-    color: #000; /* Black text color */
+    font-family: 'Playfair Display', serif;
+    font-size: 4em; /* Larger font size for emphasis */
+    color: #fff; /* White text color for better contrast */
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+    animation: slideInFromLeft 2s ease-out; /* Slower slide-in animation */
 }
 
-/* Paragraph styling */
-.name-intro p {
-    font-family: 'Roboto', sans-serif; /* Clean and modern font for text */
-    font-size: 1.2em; /* Slightly larger font size for readability */
-    max-width: 800px; /* Limit text width */
-    margin: 0 auto; /* Center text */
-    font-weight: normal; /* Normal weight for body text */
+/* Introduction paragraph styling */
+.intro-text {
+    font-family: 'Lora', serif;
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #fff; /* White text color for better contrast */
+    line-height: 1.8; /* Better readability */
+    padding: 0 20px; /* Added padding for better spacing */
+    animation: fadeIn 2.5s ease-in-out; /* Slower fade-in animation for text */
 }
 
-/* Buttons section at the bottom */
+/* Buttons section at the bottom right */
 .top-buttons {
+    position: absolute;
+    bottom: 120px; /* Adjust the distance from the bottom if needed */
+    left: 800px; /* Move buttons to the far right side */
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center;
-    margin: 20px 0; /* Space from the top and bottom */
-    gap: 20px; /* Increased gap between buttons */
-    z-index: 1; /* Ensure buttons are above the background */
+    flex-direction: column;
+    align-items: flex-end; /* Align buttons to the end (right) */
+    gap: 15px;
 }
 
 /* Button styles */
 .btn {
     display: inline-block;
-    padding: 8px 16px; /* Reduced padding */
-    background-color: rgba(255, 255, 255, 0.8); /* Light transparency for button background */
-    color: #000; /* Black text color for buttons */
+    padding: 12px 25px; /* Increased padding for a more prominent button */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
     text-decoration: none;
-    font-size: 16px; /* Smaller font size */
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.1em; /* Slightly larger font size for better visibility */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
+    transition: background-color 0.5s, color 0.5s, transform 0.5s, box-shadow 0.5s;
+    animation: bounceIn 1s ease-out; /* Slower bounce-in animation */
 }
 
 .btn:hover {
-    background-color: rgba(255, 255, 255, 1); /* Solid white background on hover */
-    color: #000; /* Black text color on hover */
+    background-color: rgba(255, 255, 255, 1);
+    color: #000;
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 /* Footer styles */
 footer {
-    color: #000; /* Black text color for footer */
+    color: #fff; /* White text color for footer */
     text-align: center;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.5); /* Light transparency for footer background */
-    z-index: 1; /* Ensure footer is above the background */
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for footer */
+    z-index: 1;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3); /* Shadow for a floating effect */
+    animation: slideInFromBottom 1.5s ease-out; /* Slower slide-in animation for footer */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

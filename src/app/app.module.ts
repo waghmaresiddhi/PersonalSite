@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
+import { HobbiesComponent } from './hobbies/hobbies.component'; // Import HobbiesComponent
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -13,7 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     AboutComponent,
     PortfolioComponent,
-    ContactComponent
+    ContactComponent,
+    HobbiesComponent // Add HobbiesComponent to declarations
   ],
   imports: [
     BrowserModule,

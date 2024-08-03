@@ -1,31 +1,75 @@
+/* Full-screen background image */
+:host {
+  display: block;
+  background: url('https://www.michelleprince.com/wp-content/uploads/2018/05/MP-female-ambition.jpg') no-repeat center center; /* Background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center 10%; /* Shift the background image 10% downward */
+  height: 100vh; /* Full viewport height */
+  overflow: auto; /* Allow scrolling */
+}
+
+/* Container for Contact page */
 .contact-container {
-    padding: 20px;
+  padding: 40px;
+  max-width: 900px; /* Wider container for larger screens */
+  margin: auto; /* Center horizontally */
+  position: relative; /* For positioning pseudo-elements */
+  background: rgba(255, 255, 255, 0.4); /* More transparent white background for lighter effect */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  color: #000; /* Darker text color for better contrast */
+}
+
+/* Section title */
+.contact-container h2 {
+  text-align: center;
+  font-size: 2.5em; /* Larger font size for emphasis */
+  color: #000; /* Dark text color for readability */
+  font-weight: bold; /* Make text bold */
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif; /* Clean and modern font */
+}
+
+/* Section subtitle and list items */
+.contact-container p, .contact-container ul {
+  font-size: 1.1em; /* Slightly larger font size for paragraphs and list items */
+  line-height: 1.8;
+  color: #000; /* Darker text color for readability */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Links styling */
+.contact-container a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+.contact-container a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* List styling */
+.contact-container ul {
+  padding-left: 0;
+  list-style: none; /* Remove default list styling */
+}
+
+.contact-container li {
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px; /* Less padding on smaller screens */
+    margin-top: 20px; /* Adjust space from the top */
   }
-  
+
   .contact-container h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 1.8em; /* Adjust font size for smaller screens */
   }
-  
+
   .contact-container p {
-    font-size: 1.2em;
+    font-size: 1em; /* Adjust paragraph font size */
   }
-  
-  .contact-container ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .contact-container li {
-    margin: 10px 0;
-  }
-  
-  .contact-container a {
-    text-decoration: none;
-    color: #007bff;
-  }
-  
-  .contact-container a:hover {
-    text-decoration: underline;
-  }
-  
+}
