@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
+body {
+  background-color: rgba(102, 189, 204, 0.6); /* Brownish-yellow with 60% opacity */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh; /* Set to 100vh to ensure it covers the full viewport height */
+  overflow: hidden; /* Prevent scrollbars due to overflow */
+}

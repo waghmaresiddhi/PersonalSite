@@ -1,0 +1,101 @@
+/* src/app/portfolio/portfolio.component.css */
+
+/* Overall container styling */
+.portfolio-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f9f9f9; /* Light background for better readability */
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: calc(100vh - 60px); /* Adjust height considering header/footer */
+}
+
+/* Introduction section styling */
+.introduction {
+  margin-bottom: 40px;
+}
+
+.introduction h2 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.introduction p {
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Projects section styling */
+.projects {
+  margin-top: 40px;
+}
+
+.projects h2 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Project card styling */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-details {
+  padding: 20px;
+}
+
+.project-details h3 {
+  font-size: 2em;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.project-details p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.project-details ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.project-details a.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project-details a.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Ensure scrolling in case of overflow */
+body {
+  margin: 0; /* Remove default margin */
+}
+
+html, body {
+  height: 100%; /* Full height to enable scrolling */
+}

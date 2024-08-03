@@ -1,0 +1,31 @@
+.contact-container {
+    padding: 20px;
+  }
+  
+  .contact-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .contact-container p {
+    font-size: 1.2em;
+  }
+  
+  .contact-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact-container li {
+    margin: 10px 0;
+  }
+  
+  .contact-container a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .contact-container a:hover {
+    text-decoration: underline;
+  }
+  

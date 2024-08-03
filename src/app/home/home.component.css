@@ -1,0 +1,96 @@
+/* Home container styles */
+.home-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    min-height: 100vh; /* Ensure it covers at least full viewport height */
+    position: relative; /* Relative positioning for absolute children */
+    overflow: hidden; /* Hide overflow content */
+    text-align: center; /* Center-align text */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Full-screen background image */
+.background-image {
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQN37h6jdzKRM5Xsj-1yPpaThAXSBAQVIzsA&s') no-repeat center center; /* Background image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    z-index: -1; /* Place it behind other content */
+    /* Add a filter to ensure clarity if needed */
+    /* filter: brightness(1) contrast(1) saturate(1); */
+}
+
+/* Main content section */
+.main-content {
+    padding: 20px;
+    z-index: 1; /* Ensure content is above the background */
+}
+
+/* Name and introduction styles */
+.name-intro {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 60vh; /* Give it enough height for vertical centering */
+    margin-bottom: 40px; /* Space between introduction and buttons */
+}
+
+/* Name styles */
+.name-intro h1 {
+    font-family: 'Playfair Display', serif; /* Elegant font for name */
+    font-size: 3em; /* Large font size for emphasis */
+    color: #000; /* Black text color */
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+.name-intro p {
+    font-family: 'Roboto', sans-serif; /* Clean and modern font for text */
+    font-size: 1.2em; /* Slightly larger font size for readability */
+    max-width: 800px; /* Limit text width */
+    margin: 0 auto; /* Center text */
+    font-weight: normal; /* Normal weight for body text */
+}
+
+/* Buttons section at the bottom */
+.top-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    margin: 20px 0; /* Space from the top and bottom */
+    gap: 20px; /* Increased gap between buttons */
+    z-index: 1; /* Ensure buttons are above the background */
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced padding */
+    background-color: rgba(255, 255, 255, 0.8); /* Light transparency for button background */
+    color: #000; /* Black text color for buttons */
+    text-decoration: none;
+    font-size: 16px; /* Smaller font size */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white background on hover */
+    color: #000; /* Black text color on hover */
+}
+
+/* Footer styles */
+footer {
+    color: #000; /* Black text color for footer */
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Light transparency for footer background */
+    z-index: 1; /* Ensure footer is above the background */
+}
